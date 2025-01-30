@@ -84,9 +84,12 @@ def load_user(user_id):
 
 
 def send_reset_email(user, reset_url):
+    print("INSIDE")
     msg = Message('Password Reset Request',
-                  sender='your-email@gmail.com',
+                  sender='your_mail_here',
                   recipients=[user.email])
+
+    print("BEFORE MSG")
 
     msg.html = f'''
     <html>

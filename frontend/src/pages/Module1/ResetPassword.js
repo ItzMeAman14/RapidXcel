@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from "./css/Home.css";
+import "./css/Home.css";
 import { toast } from "react-toastify";
 import { Link, useParams } from 'react-router-dom';
 
@@ -36,21 +36,21 @@ const ResetPassword = () => {
     }
     return (
         <div>
-            <div className={styles.modal} id="modal">
-                <div className={styles.modal_content} id="modalContent">
+            <div className={"modal"} id="modal">
+                <div className={"modal_content"} id="modalContent">
                     <h3>Reset Password</h3>
                     <form onSubmit={resetPassword}>
-                        <div className={styles.input_box}>
+                        <div className={"input_box"}>
                             <label htmlFor="newPassword">New Password</label>
                             <input type="password" placeholder="Enter a new password" value={password} onChange={(event) => { setPassword(event.target.value) }} required />
                         </div>
-                        <div className={styles.input_box}>
+                        <div className={"input_box"}>
                             <label htmlFor="newPassword">Confirm Password</label>
                             <input type="password" placeholder="Re-enter your password" value={confirmPassword} onChange={(event) => { setConfirmPassword(event.target.value) }} required />
                         </div>
-                        <button type="submit" className={styles.manualbtn} disabled={resetting}>{resetting ? "Resetting..." : "Reset"}</button>
-                        <div className={styles.register_link}>
-                            <Link to="/" className={styles.switchToLogin}>Back to home</Link>
+                        <button type="submit" className={"manualbtn"} disabled={resetting}>{resetting ? "Resetting..." : "Reset"}</button>
+                        <div className={"register_link"}>
+                            <Link to="/" className={"switchToLogin"}>Back to home</Link>
                         </div>
                     </form>
                 </div>
